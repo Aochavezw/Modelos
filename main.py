@@ -22,14 +22,3 @@ for f in [euclidean_distance, manhattan_distance, cosine_distance]:
     print("Predictions", y_pred)
     print("Actual", y_test)
     print('*' * 50)
-
-    plt.figure(figsize=(10,10))
-    plt.scatter(y_test, y_pred, c='crimson')
-    
-    p1 = max(max(y_pred), max(y_test))
-    p2 = min(min(y_pred), min(y_test))
-    plt.plot([p1, p2], [p1, p2], 'b-')
-    plt.xlabel('True Values', fontsize=15)
-    plt.ylabel('Predictions', fontsize=15)
-    plt.axis('equal')
-    plt.show()
